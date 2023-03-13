@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import NavbarBot from "./components/NavbarBot/NavbarBot";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AddBlock from "./components/AddBlock/AddBlock";
+import Contact from "./components/Contact/Contact";
+import Favorites from "./components/Favorites/Favorites";
+import AboutUs from "./components/AboutUs/AboutUs";
 
-function App() {
+import HomeBlo from "./components/HomeBlo/HomeBlo";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+        <NavbarBot />
+        <Routes>
+          <Route path="/" element={<HomeBlo />} />
+          <Route path="/add-product" element={<AddBlock />} />
+          <Route path="/contacts" element={<Contact />} />
+          <Route path="/favorites" element={<Favorites />} />
+          <Route path="/about-us" element={<AboutUs />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;

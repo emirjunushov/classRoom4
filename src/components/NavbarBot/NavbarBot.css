@@ -1,0 +1,41 @@
+.img-navbar {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+.main-content-navbar {
+  display: contents;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-block {
+  margin-top: 2%;
+  font-size: 18px;
+  font-family: "Sono", sans-serif;
+  border: 0 solid black;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 55px;
+  cursor: pointer;
+}
+.container-block:hover {
+  border: 0 solid white;
+  background-color: black;
+  color: white !important;
+}
+.container-list {
+  color: black;
+}
+.container-list:hover {
+  color: white;
+}
+.link-navbar {
+  list-style-type: none;
+  text-decoration: none;
+}
